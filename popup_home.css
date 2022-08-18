@@ -1,0 +1,82 @@
+#switch-track {
+    width: 100px;
+    height: 50px;
+    background-color: #4ed164;
+    position: relative;
+    border-radius: 5px;
+}
+
+label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 3px;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 5px;
+}
+
+input:checked+label {
+    animation: move1 .4s ease-in-out forwards;
+}
+
+input:not(:checked)+label {
+    animation: move2 .4s ease-in-out forwards
+}
+
+label:before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+
+input:checked+label:before {
+    content: "ON";
+}
+
+input:not(:checked)+label:before {
+    content: "OFF";
+}
+
+button.settings {
+    padding: 13px;
+    width: 100px;
+    margin-top: 20px;
+    border: 1px solid #00000080;
+    background-color: white;
+    border-radius: 5px;
+}
+
+@keyframes move1 {
+    0% {
+        transform: translateX(0);
+    }
+
+    40%,
+    70% {
+        border-radius: 50%;
+    }
+
+    100% {
+        transform: translateX(50px);
+    }
+}
+
+@keyframes move2 {
+    0% {
+        transform: translateX(50px);
+    }
+
+    40%,
+    70% {
+        border-radius: 50%;
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,47 @@
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+        height: 150px;
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="popup_home.css">
+    <link rel="stylesheet" href="popup_settings.css">
+</head>
+
+<body>
+
+    <!-- animated switch -->
+    <div id="home-page">
+        <div id="switch-track">
+            <input type="checkbox" hidden id="switch">
+            <label for="switch"></label>
+        </div>
+        <button id="settingsButton" class="settings">Settings</button>
+    </div>
+
+    <div id="settings-page">
+        <p>ON/OFF HOTKEY</p>
+        <button id="closeButton">X</button>
+        <div id="hotkey" tabindex="0">
+            [Enter Key]
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="./popup.js"></script>
